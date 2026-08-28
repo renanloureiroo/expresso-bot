@@ -3,6 +3,10 @@
   "name": "expresso-despertador",
   "main": "src/index.js",
   "compatibility_date": "2026-08-28",
+  // A URL pública existe só para o POST /disparar, o gatilho manual. As URLs de
+  // preview publicariam cada versão nova num endereço próprio, sem serventia aqui.
+  "workers_dev": true,
+  "preview_urls": false,
   "observability": {
     // Deixa o log do dispatch visível em `wrangler tail` e no painel.
     "enabled": true

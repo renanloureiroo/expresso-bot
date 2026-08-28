@@ -87,7 +87,15 @@ npx wrangler secret put GITHUB_TOKEN  # cole o token do passo abaixo
 npx wrangler deploy
 ```
 
-O token é um *fine-grained* PAT criado em [github.com/settings/personal-access-tokens](https://github.com/settings/personal-access-tokens/new), com acesso **só a este repositório** e uma única permissão: *Actions → Read and write*. É o mínimo para pedir um `workflow_dispatch`.
+O token é um *fine-grained* PAT criado em [github.com/settings/personal-access-tokens](https://github.com/settings/personal-access-tokens/new), em *Repository access* escolha **Only select repositories** e marque este repositório — a opção *Public repositories* é somente leitura e não serve. Em *Permissions*, duas são necessárias:
+
+| Permissão | Nível |
+|---|---|
+| Actions | Read and write |
+| Contents | Read and write |
+
+> [!IMPORTANT]
+> `Actions` sozinha não basta: o `workflow_dispatch` responde `403 Resource not accessible by personal access token` sem a permissão de `Contents`. Se ainda assim der 403, um PAT *classic* com o escopo `repo` funciona — é o que a documentação da API descreve para este endpoint.
 
 Ajuste o `GITHUB_REPO` no [`worker/wrangler.jsonc`](worker/wrangler.jsonc) para o seu repositório, e o horário no `crons` do mesmo arquivo. Dois segredos são opcionais: `DISCORD_WEBHOOK_URL`, para o Worker avisar no canal se o dispatch nem sair; e `TRIGGER_TOKEN`, que libera um `POST /disparar?token=...` para acionar o boletim sem esperar o horário.
 
