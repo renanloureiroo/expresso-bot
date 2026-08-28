@@ -2,7 +2,7 @@ name: Expresso
 
 on:
   schedule:
-    - cron: "20 11 * * 1-5"
+    - cron: "0 11 * * 1-5"
   workflow_dispatch:
     inputs:
       forcar:
