@@ -13,7 +13,7 @@
 
 Todo dia útil às 7h da manhã ele varre dezenas de fontes, joga fora o que não interessa e posta no canal as 4 a 6 notícias que sobraram, cada uma com uma frase dizendo **por que aquilo importa para quem está construindo**.
 
-Roda no GitHub Actions, sem servidor e sem cartão de crédito: um pacote Python, dois segredos, um `cron`.
+Roda no GitHub Actions, sem servidor e sem cartão de crédito: um pacote Python, dois segredos, e um Worker da Cloudflare de vinte linhas que faz o papel de despertador.
 
 ## O que ele posta
 
@@ -48,7 +48,9 @@ Mais o Hacker News: histórias acima de 80 pontos nos termos de IA, linguagem, f
 
 **Curadoria.** O Gemini recebe a lista limpa e escolhe as 4 a 6 que valem a atenção, priorizando o que muda o que dá para construir — código, produto ou modelo. Um dia bom tem mais de uma frente representada, mas nada é forçado: se só houve coisa boa em uma, o boletim é sobre ela. Se o dia estiver fraco, ele posta menos — encher linguiça é proibido no prompt. Se inventar um link que não estava na lista, o boletim é descartado e ele tenta de novo (até 3 vezes).
 
-**Entrega.** Um webhook posta no canal, quebrando a mensagem se ela passar do limite de 2000 caracteres do Discord. Não há processo ligado 24/7: o GitHub Actions acorda o script uma vez por dia, ele faz o trabalho e morre.
+**Entrega.** Um webhook posta no canal, quebrando a mensagem se ela passar do limite de 2000 caracteres do Discord. Não há processo ligado 24/7: o script é acordado uma vez por dia, faz o trabalho e morre.
+
+**Despertador.** Quem marca as 7h é um Worker da Cloudflare, não o `cron` do GitHub. O `schedule` do Actions não é garantido — em repositório novo ele pode atrasar horas ou ser descartado sem deixar rastro, e foi exatamente o que aconteceu aqui. O Worker acorda no horário e chama o `workflow_dispatch` pela API, que é o caminho confiável. O `cron` do Actions continua no arquivo como segunda tentativa, meia hora depois, para o caso de o Worker falhar.
 
 ## Começando
 
@@ -72,21 +74,40 @@ gh repo create expresso --public --source=. --push
 | `DISCORD_WEBHOOK_URL` | o webhook do passo 3 |
 | `GEMINI_API_KEY` | a chave do passo 2 |
 
-**5. Teste.** Aba *Actions* → *Expresso* → *Run workflow*. Em cerca de um minuto o boletim aparece no Discord. A partir daí ele roda sozinho.
+**5. Teste.** Aba *Actions* → *Expresso* → *Run workflow*. Em cerca de um minuto o boletim aparece no Discord.
+
+**6. Ligue o despertador.** Sem ele o boletim só sai na mão — o `cron` do GitHub sozinho não é confiável (veja *Despertador* acima). É um Worker da Cloudflare, dentro do free tier:
+
+```bash
+cd worker
+npm install
+npx wrangler login                    # abre o navegador, sem cartão
+
+npx wrangler secret put GITHUB_TOKEN  # cole o token do passo abaixo
+npx wrangler deploy
+```
+
+O token é um *fine-grained* PAT criado em [github.com/settings/personal-access-tokens](https://github.com/settings/personal-access-tokens/new), com acesso **só a este repositório** e uma única permissão: *Actions → Read and write*. É o mínimo para pedir um `workflow_dispatch`.
+
+Ajuste o `GITHUB_REPO` no [`worker/wrangler.jsonc`](worker/wrangler.jsonc) para o seu repositório, e o horário no `crons` do mesmo arquivo. Dois segredos são opcionais: `DISCORD_WEBHOOK_URL`, para o Worker avisar no canal se o dispatch nem sair; e `TRIGGER_TOKEN`, que libera um `POST /disparar?token=...` para acionar o boletim sem esperar o horário.
 
 > [!NOTE]
 > O workflow precisa de permissão de escrita para commitar o `history.json` de volta. Se o push falhar, confira *Settings → Actions → General → Workflow permissions* e marque *Read and write permissions*.
 
 ## Configuração
 
-O horário fica no `cron` do [`expresso.yml`](.github/workflows/expresso.yml), sempre em UTC — some 3 horas para converter de Brasília:
+O horário do boletim fica no `crons` do [`worker/wrangler.jsonc`](worker/wrangler.jsonc), sempre em UTC — some 3 horas para converter de Brasília:
 
-```yaml
-- cron: "0 10 * * 1-5"   # 10:00 UTC = 07:00 em Brasília, de segunda a sexta
+```jsonc
+"triggers": {
+  "crons": ["0 10 * * 1-5"]   // 10:00 UTC = 07:00 em Brasília, de segunda a sexta
+}
 ```
 
+Mudou o horário aqui? Rode `npx wrangler deploy` de novo, e mova junto a rede de segurança do [`expresso.yml`](.github/workflows/expresso.yml), que deve ficar cerca de meia hora depois.
+
 > [!TIP]
-> O cron do GitHub não aceita variável de ambiente: ele é lido antes de o workflow existir. Por isso o horário mora no próprio arquivo, e não em `env`.
+> Nenhum dos dois `cron` aceita variável de ambiente: ambos são lidos antes de o código existir. Por isso o horário mora nos próprios arquivos, e não em `env`.
 
 As fontes e o prompt são dados, não código — ficam em arquivos próprios, e mexer neles não encosta na lógica:
 
@@ -175,16 +196,20 @@ src/expresso/
 config/
   sources.toml     feeds, termos do Hacker News e filtros
   prompt.md        o prompt da curadoria
+worker/
+  src/index.js     o despertador: chama o workflow_dispatch no horário
+  wrangler.jsonc   horário, repositório e nome do Worker
 pyproject.toml     dependências e empacotamento
 ```
 
 ## Detalhes que importam
 
-- **Não publica duas vezes no mesmo dia.** A data do último boletim fica no `history.json`; o cron e um *Run workflow* na mão não se atropelam (e o `concurrency` do workflow garante que não disputem o push).
+- **Não publica duas vezes no mesmo dia.** A data do último boletim fica no `history.json`, e uma segunda execução automática no mesmo dia sai sem publicar — é o que faz a rede de segurança do Actions ser inofensiva quando o Worker já cumpriu o horário. O `concurrency` do workflow garante que as duas não disputem o push.
+- **Publicar na mão não cancela o boletim do dia.** Um *Run workflow* com *forçar* marcado guarda os links que publicou, mas não carimba o dia como entregue: o boletim das 7h sai na mesma, já sabendo o que a execução manual cobriu, sem repetir notícia.
 - **Dia fraco não vira boletim ruim.** Com menos de 3 itens depois da peneira, o script sai sem publicar e sem gastar API.
 - **Link inventado invalida o boletim.** Toda URL da resposta é conferida contra a lista enviada ao modelo. Não bateu, descarta e tenta de novo.
 - **Segredo não vaza no log.** O repositório é público e o `requests` põe a URL inteira na mensagem de erro — token do webhook incluído. Toda saída de erro passa por um filtro antes de chegar no log do Actions.
-- **Falha avisa.** Se o job quebrar, o próprio bot posta no canal com o link do log.
+- **Falha avisa.** Se o job quebrar, o próprio bot posta no canal com o link do log. E se o dispatch nem chegar a sair, quem avisa é o Worker — senão não haveria job nenhum para reclamar.
 
 ## Solução de problemas
 
@@ -195,5 +220,6 @@ pyproject.toml     dependências e empacotamento
 | "Não saiu boletim em 3 tentativas" | Cota do Gemini estourada, chave inválida, ou o modelo insistindo em inventar link |
 | O `history.json` não atualiza | Permissão de escrita do workflow (veja a nota em *Começando*) |
 | Uma fonte aparece como `! Nome: HTTPError` | Feed fora do ar. É ignorado de propósito; se for permanente, tire de `config/sources.toml` |
+| Deu a hora e não apareceu nenhuma execução | O Worker não disparou. `cd worker && npx wrangler tail` mostra o log do horário; se o token expirou, o GitHub responde 401 ali |
 
 <p align="center"><sub>feito n'A Garagem · <a href="LICENSE">MIT</a></sub></p>

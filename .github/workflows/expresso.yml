@@ -1,8 +1,12 @@
 name: Expresso
 
 on:
+  # Quem manda no horário é o Worker da Cloudflare (worker/), que chama o
+  # workflow_dispatch às 7h. Este cron é só a rede de segurança: se o Worker
+  # falhar, o boletim ainda sai meia hora depois — e se ele tiver funcionado,
+  # a trava do history.json faz esta execução pular sem publicar de novo.
   schedule:
-    - cron: "20 11 * * 1-5"
+    - cron: "40 10 * * 1-5"
   workflow_dispatch:
     inputs:
       forcar:

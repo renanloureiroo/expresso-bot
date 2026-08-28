@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "expresso-despertador",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-28",
+  "observability": {
+    // Deixa o log do dispatch visível em `wrangler tail` e no painel.
+    "enabled": true
+  },
+  "triggers": {
+    // 10:00 UTC = 07:00 em Brasília, de segunda a sexta.
+    "crons": ["0 10 * * 1-5"]
+  },
+  "vars": {
+    "GITHUB_REPO": "renanloureiroo/expresso-bot",
+    "WORKFLOW_FILE": "expresso.yml",
+    "GITHUB_REF": "main"
+  }
+  // Os segredos não moram aqui. Veja o README do worker:
+  //   wrangler secret put GITHUB_TOKEN
+  //   wrangler secret put DISCORD_WEBHOOK_URL   (opcional, para avisar de falha)
+  //   wrangler secret put TRIGGER_TOKEN         (opcional, para o /disparar)
+}
