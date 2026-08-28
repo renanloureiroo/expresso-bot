@@ -41,6 +41,11 @@ def _decimal(name: str, default: float) -> float:
         raise ValueError(f"{name} precisa ser um número, veio {raw!r}.") from error
 
 
+def _list(name: str, default: str) -> tuple[str, ...]:
+    raw = _text(name) or default
+    return tuple(part.strip() for part in raw.split(",") if part.strip())
+
+
 def _enabled(name: str) -> bool:
     return _text(name) == "1"
 
@@ -66,6 +71,7 @@ class Config:
 
     # Model
     model: str
+    fallback_models: tuple[str, ...]
     temperature: float
     max_tokens: int
     thinking: str
@@ -105,10 +111,15 @@ class Config:
             window_hours=_integer("WINDOW_HOURS", 26),
             # Stay on the Flash line: Pro left the free tier in April 2026.
             model=_text("MODEL") or "gemini-3.7-flash",
+            # Reserves for when the main model answers 503 under load. Sorted
+            # newest first, so the bulletin degrades one step at a time.
+            fallback_models=_list("MODEL_FALLBACK", "gemini-3.6-flash,gemini-3.5-flash"),
             temperature=_decimal("MODEL_TEMPERATURE", 0.4),
             max_tokens=_integer("MODEL_MAX_TOKENS", 4000),
             thinking=_text("MODEL_THINKING") or "low",
-            attempts=_integer("ATTEMPTS", 3),
+            # Two are enough now that each one already sweeps the whole model
+            # chain; more would risk the workflow timeout.
+            attempts=_integer("ATTEMPTS", 2),
             timeout=_integer("TIMEOUT_SECONDS", 20),
             # Writing the bulletin takes far longer than fetching a feed, but a
             # hung request must not hold the run until the workflow kills it.
@@ -142,6 +153,11 @@ class Config:
             )
             if not value
         ]
+
+    @property
+    def models(self) -> tuple[str, ...]:
+        """The main model first, then its reserves, without repeats."""
+        return tuple(dict.fromkeys((self.model, *self.fallback_models)))
 
     @property
     def secrets(self) -> tuple[str, ...]:

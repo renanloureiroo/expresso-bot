@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import random
 import sys
 import time
 from datetime import datetime
@@ -13,6 +14,10 @@ from expresso.text import links_in, normalize_url
 # The bulletin is written in Brazilian Portuguese, so are the weekday names.
 WEEKDAYS = ["segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo"]
 WAIT_BETWEEN_ATTEMPTS = 60
+# Congestion and rate limits pass on their own, and a reserve model may not be
+# under the same load. Anything else is ours to fix, and repeating the request
+# would only burn the budget.
+TRANSIENT_CODES = frozenset({429, 500, 502, 503, 504})
 
 
 def _load_prompt(cfg: Config) -> str:
@@ -34,7 +39,7 @@ def _build_prompt(items: list[Item], cfg: Config) -> str:
     )
 
 
-def _generate(prompt: str, cfg: Config):
+def _generate(prompt: str, cfg: Config, model: str):
     from google import genai
     from google.genai import types
 
@@ -46,7 +51,7 @@ def _generate(prompt: str, cfg: Config):
         http_options=types.HttpOptions(timeout=cfg.gemini_timeout * 1000),
     )
     return client.models.generate_content(
-        model=cfg.model,
+        model=model,
         contents=prompt,
         config=types.GenerateContentConfig(
             thinking_config=types.ThinkingConfig(thinking_level=cfg.thinking),
@@ -54,6 +59,17 @@ def _generate(prompt: str, cfg: Config):
             temperature=cfg.temperature,
         ),
     )
+
+
+def _is_transient(error: Exception) -> bool:
+    """Whether a reserve model — or simply more patience — could get past it."""
+    return getattr(error, "code", None) in TRANSIENT_CODES
+
+
+def _wait(attempt: int) -> None:
+    """Back off with jitter, so retries do not all land on the same spike."""
+    half = WAIT_BETWEEN_ATTEMPTS * attempt / 2
+    time.sleep(half + random.uniform(0, half))
 
 
 def _finish_reason(response) -> str:
@@ -71,12 +87,23 @@ def write_bulletin(items: list[Item], cfg: Config) -> str:
 
     last_error = ""
     for attempt in range(1, cfg.attempts + 1):
-        try:
-            response = _generate(prompt, cfg)
-        except Exception as error:
-            last_error = f"{type(error).__name__}: {error}"
-            print(f"  tentativa {attempt}: {last_error}", file=sys.stderr)
-            time.sleep(WAIT_BETWEEN_ATTEMPTS * attempt)
+        response = None
+        for model in cfg.models:
+            try:
+                response = _generate(prompt, cfg, model)
+                break
+            except Exception as error:
+                last_error = f"{model}: {type(error).__name__}: {error}"
+                print(f"  tentativa {attempt}: {last_error}", file=sys.stderr)
+                # A congested model is worth swapping out right away; a broken
+                # request would fail the same way on every reserve.
+                if not _is_transient(error):
+                    break
+
+        if response is None:
+            # Sleeping after the last attempt only delays the failure.
+            if attempt < cfg.attempts:
+                _wait(attempt)
             continue
 
         text = (response.text or "").strip()
