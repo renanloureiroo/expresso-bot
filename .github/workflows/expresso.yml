@@ -51,11 +51,22 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add history.json
-          git diff --staged --quiet || {
-            git commit -m "Boletim de $(date -u +%d/%m)"
-            git pull --rebase --autostash
-            git push
-          }
+          git diff --staged --quiet && exit 0
+
+          git commit -m "Boletim de $(date -u +%d/%m)"
+
+          # Um commit que chegue ao main enquanto o boletim é escrito faz o push
+          # ser recusado, e aí o boletim já saiu no Discord mas o histórico se
+          # perde — o próximo dia republicaria o que já foi. Rebase e tenta de
+          # novo; o history.json não conflita, já que ninguém mais mexe nele.
+          for tentativa in 1 2 3; do
+            git pull --rebase --autostash && git push && exit 0
+            echo "Push recusado (tentativa $tentativa). Alguém empurrou primeiro; tentando de novo."
+            sleep $((tentativa * 5))
+          done
+
+          echo "::error::O boletim saiu, mas o history.json não subiu em 3 tentativas."
+          exit 1
 
       - name: Avisar no Discord se quebrou
         if: failure()
