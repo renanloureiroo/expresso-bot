@@ -73,6 +73,7 @@ class Config:
 
     # Network
     timeout: int
+    gemini_timeout: int
     discord_timeout: int
     workers: int
 
@@ -109,6 +110,9 @@ class Config:
             thinking=_text("MODEL_THINKING") or "low",
             attempts=_integer("ATTEMPTS", 3),
             timeout=_integer("TIMEOUT_SECONDS", 20),
+            # Writing the bulletin takes far longer than fetching a feed, but a
+            # hung request must not hold the run until the workflow kills it.
+            gemini_timeout=_integer("GEMINI_TIMEOUT", 120),
             discord_timeout=_integer("DISCORD_TIMEOUT", 30),
             workers=_integer("WORKERS", 8),
             max_entries_per_feed=_integer("MAX_ENTRIES_PER_FEED", 25),

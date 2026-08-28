@@ -12,7 +12,7 @@ from expresso.text import links_in, normalize_url
 
 # The bulletin is written in Brazilian Portuguese, so are the weekday names.
 WEEKDAYS = ["segunda", "terça", "quarta", "quinta", "sexta", "sábado", "domingo"]
-WAIT_BETWEEN_ATTEMPTS = 5
+WAIT_BETWEEN_ATTEMPTS = 60
 
 
 def _load_prompt(cfg: Config) -> str:
@@ -38,7 +38,13 @@ def _generate(prompt: str, cfg: Config):
     from google import genai
     from google.genai import types
 
-    client = genai.Client(api_key=cfg.gemini_key)
+    # HttpOptions.timeout is in milliseconds. Without it a stalled request
+    # hangs forever and the whole run dies on the workflow timeout instead of
+    # spending its retries.
+    client = genai.Client(
+        api_key=cfg.gemini_key,
+        http_options=types.HttpOptions(timeout=cfg.gemini_timeout * 1000),
+    )
     return client.models.generate_content(
         model=cfg.model,
         contents=prompt,
