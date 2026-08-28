@@ -1,0 +1,133 @@
+# Fontes do Expresso.
+#
+# O boletim cobre três frentes — programacao, produto e ia. O campo `track`
+# agrupa os feeds para dar para ver, de relance, se alguma está descoberta.
+# Editar uma fonte aqui é commit de dado, não de código.
+
+# --- Programação e engenharia --------------------------------------------
+
+[[feeds]]
+track = "programacao"
+name = "GitHub Blog"
+url = "https://github.blog/feed/"
+
+[[feeds]]
+track = "programacao"
+name = "Stack Overflow"
+url = "https://stackoverflow.blog/feed/"
+
+[[feeds]]
+track = "programacao"
+name = "Pragmatic Engineer"
+url = "https://blog.pragmaticengineer.com/rss/"
+
+[[feeds]]
+track = "programacao"
+name = "InfoQ"
+url = "https://feed.infoq.com/"
+
+[[feeds]]
+track = "programacao"
+name = "Cloudflare"
+url = "https://blog.cloudflare.com/rss/"
+
+[[feeds]]
+track = "programacao"
+name = "Simon Willison"
+url = "https://simonwillison.net/atom/everything/"
+
+# --- Produto e mercado ----------------------------------------------------
+
+[[feeds]]
+track = "produto"
+name = "Lenny's Newsletter"
+url = "https://www.lennysnewsletter.com/feed"
+
+[[feeds]]
+track = "produto"
+name = "TechCrunch Startups"
+url = "https://techcrunch.com/category/startups/feed/"
+
+[[feeds]]
+track = "produto"
+name = "Brazil Journal"
+url = "https://braziljournal.com/feed/"
+
+[[feeds]]
+track = "produto"
+name = "Tecnoblog"
+url = "https://tecnoblog.net/feed/"
+
+[[feeds]]
+track = "produto"
+name = "Ars Technica"
+url = "https://feeds.arstechnica.com/arstechnica/technology-lab"
+
+# --- IA -------------------------------------------------------------------
+
+[[feeds]]
+track = "ia"
+name = "TechCrunch AI"
+url = "https://techcrunch.com/category/artificial-intelligence/feed/"
+
+[[feeds]]
+track = "ia"
+name = "The Verge AI"
+url = "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"
+
+[[feeds]]
+track = "ia"
+name = "VentureBeat AI"
+url = "https://venturebeat.com/category/ai/feed/"
+
+[[feeds]]
+track = "ia"
+name = "MIT Tech Review"
+url = "https://www.technologyreview.com/topic/artificial-intelligence/feed"
+
+[[feeds]]
+track = "ia"
+name = "OpenAI"
+url = "https://openai.com/news/rss.xml"
+
+[[feeds]]
+track = "ia"
+name = "Hugging Face"
+url = "https://huggingface.co/blog/feed.xml"
+
+[[feeds]]
+track = "ia"
+name = "Import AI"
+url = "https://importai.substack.com/feed"
+
+# --- Hacker News ----------------------------------------------------------
+
+[hacker_news]
+terms = [
+  "AI",
+  "LLM",
+  "OpenAI",
+  "Anthropic",
+  "programming language",
+  "developer tools",
+  "database",
+  "startup funding",
+  "Show HN",
+]
+
+# --- Filtros --------------------------------------------------------------
+
+# Pedaços de URL que denunciam cupom, guia de compra e review de gadget.
+[filters]
+ignored_patterns = [
+  "/achados/",
+  "/guias/",
+  "/responde/",
+  "/promocao",
+  "/cupom",
+  "/deals/",
+  "/review/",
+  "/best-",
+  "/ofertas",
+  "/melhores-",
+]

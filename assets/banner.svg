@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="Expresso — curadoria de A.I para notícias de tech, direto no Discord">
+  <defs>
+    <linearGradient id="fundo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1d1733"/>
+      <stop offset="50%" stop-color="#14111e"/>
+      <stop offset="100%" stop-color="#251b17"/>
+    </linearGradient>
+    <linearGradient id="porcelana" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%" stop-color="#FBF6EF"/>
+      <stop offset="55%" stop-color="#EADFD2"/>
+      <stop offset="100%" stop-color="#C4B6A6"/>
+    </linearGradient>
+    <linearGradient id="pires" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F6EFE6"/>
+      <stop offset="100%" stop-color="#BFB1A1"/>
+    </linearGradient>
+    <linearGradient id="cafe" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C99A63"/>
+      <stop offset="42%" stop-color="#77462B"/>
+      <stop offset="100%" stop-color="#3E200E"/>
+    </linearGradient>
+    <linearGradient id="vapor" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#5865F2" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#7C87F7" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#C3C9FF" stop-opacity=".95"/>
+    </linearGradient>
+    <linearGradient id="fio" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8A93F8" stop-opacity=".85"/>
+      <stop offset="70%" stop-color="#8A93F8" stop-opacity=".28"/>
+      <stop offset="100%" stop-color="#8A93F8" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="brilho" cx="0.5" cy="0.5">
+      <stop offset="0%" stop-color="#5865F2" stop-opacity=".3"/>
+      <stop offset="100%" stop-color="#5865F2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="aurora" cx="0.5" cy="0.5">
+      <stop offset="0%" stop-color="#E0A45C" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#E0A45C" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5">
+      <stop offset="0%" stop-color="#B9C0FF" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#B9C0FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- fundo: madrugada virando manhã -->
+  <rect width="1200" height="360" rx="18" fill="url(#fundo)"/>
+  <ellipse cx="205" cy="150" rx="300" ry="245" fill="url(#brilho)"/>
+  <ellipse cx="1010" cy="330" rx="380" ry="210" fill="url(#aurora)"/>
+  <g fill="#8A93F8" opacity=".16">
+    <circle cx="618" cy="52" r="2"/><circle cx="700" cy="96" r="1.6"/><circle cx="556" cy="112" r="1.6"/>
+    <circle cx="766" cy="46" r="2"/><circle cx="842" cy="300" r="1.6"/><circle cx="500" cy="308" r="2"/>
+    <circle cx="668" cy="324" r="1.6"/><circle cx="392" cy="60" r="1.6"/>
+  </g>
+
+  <g transform="translate(0 12)">
+  <!-- o vapor que vira rede: o café e a curadoria saem da mesma xícara -->
+  <g fill="none" stroke="url(#vapor)" stroke-width="3.5" stroke-linecap="round" opacity=".92">
+    <path d="M148 148 C 128 116, 168 100, 148 70 C 136 52, 152 40, 152 34"/>
+    <path d="M192 144 C 170 108, 214 90, 192 56 C 180 38, 196 28, 198 20"/>
+    <path d="M236 148 C 218 118, 256 102, 238 74 C 228 58, 242 46, 244 40"/>
+  </g>
+
+  <!-- a rede, e o fio que leva o boletim até o canal -->
+  <g stroke="#8A93F8" fill="none" stroke-linecap="round">
+    <path d="M152 34 L198 20 M198 20 L244 40 M152 34 L244 40 M198 20 L192 68 M152 34 L148 70 M244 40 L238 74" stroke-width="1.7" opacity=".72"/>
+  </g>
+  <path d="M244 40 C 420 4, 700 6, 880 84" fill="none" stroke="url(#fio)" stroke-width="2" stroke-dasharray="7 9" stroke-linecap="round"/>
+
+  <g>
+    <circle cx="198" cy="20" r="16" fill="url(#halo)"/>
+    <circle cx="152" cy="34" r="13" fill="url(#halo)"/>
+    <circle cx="244" cy="40" r="13" fill="url(#halo)"/>
+  </g>
+  <g fill="#C3C9FF">
+    <circle cx="152" cy="34" r="5.5"/><circle cx="198" cy="20" r="7"/><circle cx="244" cy="40" r="5.5"/>
+    <circle cx="148" cy="70" r="3.6" opacity=".8"/><circle cx="192" cy="68" r="3.6" opacity=".8"/><circle cx="238" cy="74" r="3.6" opacity=".8"/>
+  </g>
+  </g>
+
+  <!-- xícara -->
+  <ellipse cx="196" cy="312" rx="122" ry="16" fill="#000" opacity=".38"/>
+  <path d="M258 190 C 300 184, 316 208, 308 228 C 300 250, 272 256, 252 250" fill="none" stroke="url(#porcelana)" stroke-width="14" stroke-linecap="round"/>
+  <path d="M120 170 L134 262 C 137 280, 152 290, 172 290 L 220 290 C 240 290, 255 280, 258 262 L 272 170 Z" fill="url(#porcelana)"/>
+  <path d="M140 186 L151 258 C 153 270, 160 276, 170 278" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" opacity=".38"/>
+  <ellipse cx="196" cy="170" rx="76" ry="20" fill="#EFE5D8"/>
+  <ellipse cx="196" cy="170" rx="66" ry="15.5" fill="url(#cafe)"/>
+  <ellipse cx="177" cy="166" rx="21" ry="6" fill="#DCB483" opacity=".5"/>
+  <ellipse cx="214" cy="175" rx="12" ry="3.4" fill="#DCB483" opacity=".28"/>
+  <ellipse cx="196" cy="303" rx="114" ry="17" fill="url(#pires)"/>
+  <ellipse cx="196" cy="300" rx="96" ry="11" fill="#B9AB9C" opacity=".45"/>
+
+  <!-- o canal do Discord: o bot deixa o boletim lá toda manhã -->
+  <g transform="translate(898 74)">
+    <g opacity=".75">
+      <text x="2" y="-14" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#8079A8">#</text>
+      <text x="16" y="-14" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#B7B1CE" letter-spacing=".3">noticias-ia</text>
+    </g>
+    <g fill="#221d33" stroke="#3d3560" stroke-width="1.5">
+      <rect x="0" y="0" width="242" height="62" rx="13"/>
+      <rect x="0" y="76" width="242" height="62" rx="13"/>
+      <rect x="0" y="152" width="242" height="62" rx="13"/>
+    </g>
+    <g fill="#5865F2">
+      <rect x="0" y="0" width="4" height="62" rx="2"/>
+      <rect x="0" y="76" width="4" height="62" rx="2"/>
+      <rect x="0" y="152" width="4" height="62" rx="2"/>
+      <circle cx="30" cy="31" r="14"/><circle cx="30" cy="107" r="14"/><circle cx="30" cy="183" r="14"/>
+    </g>
+    <!-- avatar do bot: a marca do Discord -->
+    <g fill="#FFFFFF">
+      <g transform="translate(21.6 24.2) scale(0.7)"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></g>
+      <g transform="translate(21.6 100.2) scale(0.7)"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></g>
+      <g transform="translate(21.6 176.2) scale(0.7)"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></g>
+    </g>
+    <g fill="#F2E9DE" opacity=".88">
+      <rect x="54" y="19" width="120" height="7" rx="3.5"/>
+      <rect x="54" y="95" width="128" height="7" rx="3.5"/>
+      <rect x="54" y="171" width="110" height="7" rx="3.5"/>
+    </g>
+    <g transform="translate(190 15.5)">
+      <rect width="27" height="13" rx="4" fill="#5865F2"/>
+      <text x="13.5" y="9.6" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="7.5" font-weight="700" fill="#FFFFFF" letter-spacing=".3">BOT</text>
+    </g>
+    <g transform="translate(190 91.5)">
+      <rect width="27" height="13" rx="4" fill="#5865F2"/>
+      <text x="13.5" y="9.6" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="7.5" font-weight="700" fill="#FFFFFF" letter-spacing=".3">BOT</text>
+    </g>
+    <g transform="translate(190 167.5)">
+      <rect width="27" height="13" rx="4" fill="#5865F2"/>
+      <text x="13.5" y="9.6" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="7.5" font-weight="700" fill="#FFFFFF" letter-spacing=".3">BOT</text>
+    </g>
+    <g fill="#8079A8" opacity=".8">
+      <rect x="54" y="35" width="163" height="6" rx="3"/>
+      <rect x="54" y="47" width="96"  height="6" rx="3"/>
+      <rect x="54" y="111" width="158" height="6" rx="3"/>
+      <rect x="54" y="123" width="122" height="6" rx="3"/>
+      <rect x="54" y="187" width="163" height="6" rx="3"/>
+      <rect x="54" y="199" width="70"  height="6" rx="3"/>
+    </g>
+  </g>
+
+  <!-- texto -->
+  <text x="378" y="178" font-family="Georgia, 'Times New Roman', serif" font-size="96" font-weight="700" fill="#F8F2EA" letter-spacing="-1.5">Expresso</text>
+  <g font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+    <text x="382" y="222" font-size="22" fill="#B7B1CE">Curadoria de A.I para notícias de tech</text>
+    <text x="382" y="288" font-size="18" font-weight="600" fill="#8A93F8" letter-spacing="1.8">DIAS ÚTEIS · 7H · 4 A 6 ITENS · ZERO HYPE</text>
+  </g>
+  <rect x="382" y="246" width="72" height="4" rx="2" fill="#5865F2"/>
+  <rect x="462" y="246" width="26" height="4" rx="2" fill="#5865F2" opacity=".45"/>
+
+  <rect x="1" y="1" width="1198" height="358" rx="18" fill="none" stroke="#4a4270" stroke-width="1.5" opacity=".5"/>
+</svg>
