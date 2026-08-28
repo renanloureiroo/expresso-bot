@@ -50,7 +50,7 @@ Mais o Hacker News: histórias acima de 80 pontos nos termos de IA, linguagem, f
 
 **Entrega.** Um webhook posta no canal, quebrando a mensagem se ela passar do limite de 2000 caracteres do Discord. Não há processo ligado 24/7: o script é acordado uma vez por dia, faz o trabalho e morre.
 
-**Despertador.** Quem marca as 7h é um Worker da Cloudflare, não o `cron` do GitHub. O `schedule` do Actions não é garantido — em repositório novo ele pode atrasar horas ou ser descartado sem deixar rastro, e foi exatamente o que aconteceu aqui. O Worker acorda no horário e chama o `workflow_dispatch` pela API, que é o caminho confiável. O `cron` do Actions continua no arquivo como segunda tentativa, meia hora depois, para o caso de o Worker falhar.
+**Despertador.** Quem marca as 7h é um Worker da Cloudflare, não o `cron` do GitHub. O `schedule` do Actions não é garantido — em repositório novo ele pode atrasar horas ou ser descartado sem deixar rastro, e foi exatamente o que aconteceu aqui: dois agendamentos seguidos sumiram sem gerar execução nenhuma. O Worker acorda no horário e chama o `workflow_dispatch` pela API, que é o caminho confiável. O workflow não tem mais `schedule` algum: manter um cron que dispara em hora incerta publicaria o boletim fora de hora, o que é pior do que não publicar. Se o dispatch falhar, quem avisa no canal é o próprio Worker.
 
 ## Começando
 
@@ -112,10 +112,10 @@ O horário do boletim fica no `crons` do [`worker/wrangler.jsonc`](worker/wrangl
 }
 ```
 
-Mudou o horário aqui? Rode `npx wrangler deploy` de novo, e mova junto a rede de segurança do [`expresso.yml`](.github/workflows/expresso.yml), que deve ficar cerca de meia hora depois.
+Mudou o horário aqui? Rode `npx wrangler deploy` de novo — é só isso, o `expresso.yml` não tem horário nenhum.
 
 > [!TIP]
-> Nenhum dos dois `cron` aceita variável de ambiente: ambos são lidos antes de o código existir. Por isso o horário mora nos próprios arquivos, e não em `env`.
+> O `cron` não aceita variável de ambiente: ele é lido antes de o código existir. Por isso o horário mora no próprio `wrangler.jsonc`, e não em `env`.
 
 As fontes e o prompt são dados, não código — ficam em arquivos próprios, e mexer neles não encosta na lógica:
 
@@ -212,7 +212,7 @@ pyproject.toml     dependências e empacotamento
 
 ## Detalhes que importam
 
-- **Não publica duas vezes no mesmo dia.** A data do último boletim fica no `history.json`, e uma segunda execução automática no mesmo dia sai sem publicar — é o que faz a rede de segurança do Actions ser inofensiva quando o Worker já cumpriu o horário. O `concurrency` do workflow garante que as duas não disputem o push.
+- **Não publica duas vezes no mesmo dia.** A data do último boletim fica no `history.json`, e uma segunda execução automática no mesmo dia sai sem publicar. O `concurrency` do workflow garante que duas execuções não disputem o push, e o push do histórico tenta de novo se alguém commitar no `main` durante a escrita do boletim.
 - **Publicar na mão não cancela o boletim do dia.** Um *Run workflow* com *forçar* marcado guarda os links que publicou, mas não carimba o dia como entregue: o boletim das 7h sai na mesma, já sabendo o que a execução manual cobriu, sem repetir notícia.
 - **Dia fraco não vira boletim ruim.** Com menos de 3 itens depois da peneira, o script sai sem publicar e sem gastar API.
 - **Link inventado invalida o boletim.** Toda URL da resposta é conferida contra a lista enviada ao modelo. Não bateu, descarta e tenta de novo.

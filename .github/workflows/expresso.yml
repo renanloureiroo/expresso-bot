@@ -1,12 +1,12 @@
 name: Expresso
 
 on:
-  # Quem manda no horário é o Worker da Cloudflare (worker/), que chama o
-  # workflow_dispatch às 7h. Este cron é só a rede de segurança: se o Worker
-  # falhar, o boletim ainda sai meia hora depois — e se ele tiver funcionado,
-  # a trava do history.json faz esta execução pular sem publicar de novo.
-  schedule:
-    - cron: "40 10 * * 1-5"
+  # Não há `schedule` aqui de propósito. Quem marca as 7h é o Worker da
+  # Cloudflare (worker/), que chama este workflow_dispatch pela API. O cron do
+  # GitHub não entregou nenhuma das vezes em que foi testado neste repositório,
+  # e um agendamento que dispara horas atrasado publicaria o boletim fora de
+  # hora — pior do que não publicar. Se o dispatch falhar, o Worker avisa no
+  # Discord.
   workflow_dispatch:
     inputs:
       forcar:
@@ -51,7 +51,10 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add history.json
-          git diff --staged --quiet && exit 0
+          if git diff --staged --quiet; then
+            echo "Nada novo no histórico."
+            exit 0
+          fi
 
           git commit -m "Boletim de $(date -u +%d/%m)"
 
