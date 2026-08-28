@@ -43,9 +43,16 @@ def load(cfg: Config) -> History:
 
 
 def save(history: History, new_links: set[str], cfg: Config) -> None:
+    """Record the run.
+
+    A forced (manual) publish keeps its links but does not claim the day: the
+    scheduled bulletin still goes out at its usual hour, already knowing what
+    the manual run covered.
+    """
     now = datetime.now(timezone.utc).isoformat()
     history.links.update({url: now for url in new_links})
-    history.last_bulletin = _today(cfg)
+    if not cfg.force:
+        history.last_bulletin = _today(cfg)
 
     cfg.history_file.write_text(
         json.dumps(
