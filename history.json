@@ -1,10 +1,14 @@
 {
- "last_bulletin": "2026-08-28",
+ "last_bulletin": "2026-08-30",
  "links": {
   "//blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai": "2026-08-28T03:30:23.322536+00:00",
   "//braziljournal.com/saasholic-levanta-seu-3o-fundo-e-mira-os-agentic-software": "2026-08-28T03:30:23.322536+00:00",
   "//infoq.com/news/2026/08/astro-satteri-rust": "2026-08-28T03:30:23.322536+00:00",
+  "//infoq.com/news/2026/08/kiro-crew-coding-agents": "2026-08-30T10:01:20.043623+00:00",
+  "//infoq.com/news/2026/08/workers-inbound-tcp-grpc": "2026-08-30T10:01:20.043623+00:00",
+  "//lennysnewsletter.com/p/community-wisdom-building-without": "2026-08-30T10:01:20.043623+00:00",
   "//openai.com/index/expanding-our-presence-in-brazil": "2026-08-28T03:30:23.322536+00:00",
-  "//simonwillison.net/2026/aug/27/breaking-claude-code-opus-5-auto-mode": "2026-08-28T03:30:23.322536+00:00"
+  "//simonwillison.net/2026/aug/27/breaking-claude-code-opus-5-auto-mode": "2026-08-28T03:30:23.322536+00:00",
+  "//techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft": "2026-08-30T10:01:20.043623+00:00"
  }
 }
