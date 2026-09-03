@@ -1,6 +1,7 @@
 {
- "last_bulletin": "2026-09-02",
+ "last_bulletin": "2026-09-03",
  "links": {
+  "//blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber": "2026-09-03T10:01:47.078783+00:00",
   "//blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai": "2026-08-28T03:30:23.322536+00:00",
   "//braziljournal.com/emergente-sem-ai-e-ainda-sem-reformas-brasil-continua-sem-fluxo": "2026-08-31T10:01:16.595833+00:00",
   "//braziljournal.com/saasholic-levanta-seu-3o-fundo-e-mira-os-agentic-software": "2026-08-28T03:30:23.322536+00:00",
@@ -12,6 +13,8 @@
   "//infoq.com/news/2026/08/kiro-crew-coding-agents": "2026-08-30T10:01:20.043623+00:00",
   "//infoq.com/news/2026/08/workers-inbound-tcp-grpc": "2026-08-30T10:01:20.043623+00:00",
   "//infoq.com/news/2026/09/cloudflare-optional-oauth-scopes": "2026-09-02T10:01:16.351470+00:00",
+  "//infoq.com/news/2026/09/cohere-multimodal-parse": "2026-09-03T10:01:47.078783+00:00",
+  "//infoq.com/news/2026/09/openai-gpt-live": "2026-09-03T10:01:47.078783+00:00",
   "//lennysnewsletter.com/p/community-wisdom-building-without": "2026-08-30T10:01:20.043623+00:00",
   "//openai.com/index/expanding-our-presence-in-brazil": "2026-08-28T03:30:23.322536+00:00",
   "//simonwillison.net/2026/aug/27/breaking-claude-code-opus-5-auto-mode": "2026-08-28T03:30:23.322536+00:00",
@@ -19,6 +22,7 @@
   "//simonwillison.net/2026/aug/31/introducing-wrapture": "2026-09-01T10:01:21.403945+00:00",
   "//techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft": "2026-08-30T10:01:20.043623+00:00",
   "//techcrunch.com/2026/08/31/three-year-old-ai-media-search-startup-clipto-hits-a-250m-valuation": "2026-09-01T10:01:21.403945+00:00",
+  "//techcrunch.com/2026/09/02/palo-alto-networks-paid-500m-for-thrive-backed-console-sources-say": "2026-09-03T10:01:47.078783+00:00",
   "//tecnoblog.net/noticias/google-decreta-o-fim-do-ublock-origin-classico-no-chrome": "2026-09-02T10:01:16.351470+00:00",
   "//tecnoblog.net/noticias/pix-muda-regra-para-dificultar-golpes-da-devolucao-em-dobro": "2026-09-02T10:01:16.351470+00:00",
   "//theverge.com/ai-artificial-intelligence/987830/anthropic-claude-fable-mythos-5-1": "2026-09-02T10:01:16.351470+00:00",
