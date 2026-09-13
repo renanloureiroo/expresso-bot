@@ -1,16 +1,13 @@
 {
- "last_bulletin": "2026-09-10",
+ "last_bulletin": "2026-09-13",
  "links": {
   "//ai.meta.com/muse": "2026-09-09T10:02:01.177904+00:00",
   "//blog.cloudflare.com/workers-module-registry-nodejs": "2026-09-10T10:01:07.720692+00:00",
   "//blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber": "2026-09-03T10:01:47.078783+00:00",
-  "//blog.pragmaticengineer.com/the-pulse-we-need-to-talk-about-migrations-with-ai": "2026-08-28T03:30:23.322536+00:00",
   "//braziljournal.com/emergente-sem-ai-e-ainda-sem-reformas-brasil-continua-sem-fluxo": "2026-08-31T10:01:16.595833+00:00",
-  "//braziljournal.com/saasholic-levanta-seu-3o-fundo-e-mira-os-agentic-software": "2026-08-28T03:30:23.322536+00:00",
   "//github.com/anthropics/claude-code/issues/66504": "2026-08-31T10:01:16.595833+00:00",
   "//infoq.com/articles/chaos-engineering-ecs-payments": "2026-09-08T10:01:47.364023+00:00",
   "//infoq.com/articles/gcp-wif-scale": "2026-09-01T10:01:21.403945+00:00",
-  "//infoq.com/news/2026/08/astro-satteri-rust": "2026-08-28T03:30:23.322536+00:00",
   "//infoq.com/news/2026/08/cloudflare-ai-search": "2026-08-31T10:01:16.595833+00:00",
   "//infoq.com/news/2026/08/doordash-flux-cloud-agent": "2026-09-01T10:01:21.403945+00:00",
   "//infoq.com/news/2026/08/kiro-crew-coding-agents": "2026-08-30T10:01:20.043623+00:00",
@@ -19,11 +16,14 @@
   "//infoq.com/news/2026/09/cloudflare-optional-oauth-scopes": "2026-09-02T10:01:16.351470+00:00",
   "//infoq.com/news/2026/09/cohere-multimodal-parse": "2026-09-03T10:01:47.078783+00:00",
   "//infoq.com/news/2026/09/figma-security-agents": "2026-09-06T10:01:24.954564+00:00",
+  "//infoq.com/news/2026/09/github-hydrafusion": "2026-09-13T10:01:22.523901+00:00",
   "//infoq.com/news/2026/09/gitlab-ai-sandbox-access": "2026-09-09T10:02:01.177904+00:00",
   "//infoq.com/news/2026/09/google-beyond-zero": "2026-09-06T10:01:24.954564+00:00",
   "//infoq.com/news/2026/09/google-mantis-vulnerability-scan": "2026-09-07T10:01:52.492629+00:00",
   "//infoq.com/news/2026/09/hashicorp-packer-verification": "2026-09-09T10:02:01.177904+00:00",
   "//infoq.com/news/2026/09/http-query-method": "2026-09-10T10:01:07.720692+00:00",
+  "//infoq.com/news/2026/09/ios-27-virtualization": "2026-09-13T10:01:22.523901+00:00",
+  "//infoq.com/news/2026/09/lambda-snapstart-container-image": "2026-09-13T10:01:22.523901+00:00",
   "//infoq.com/news/2026/09/openai-gpt-live": "2026-09-03T10:01:47.078783+00:00",
   "//infoq.com/news/2026/09/vlt-npm-replacement": "2026-09-07T10:01:52.492629+00:00",
   "//infoq.com/presentations/ai-agent-testing-evaluation": "2026-09-08T10:01:47.364023+00:00",
@@ -31,10 +31,8 @@
   "//infoq.com/presentations/solopreneur-journey": "2026-09-08T10:01:47.364023+00:00",
   "//lennysnewsletter.com/p/community-wisdom-building-without": "2026-08-30T10:01:20.043623+00:00",
   "//mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier": "2026-09-08T10:01:47.364023+00:00",
-  "//openai.com/index/expanding-our-presence-in-brazil": "2026-08-28T03:30:23.322536+00:00",
   "//openai.com/index/gpt-6-astra-next-generation-work": "2026-09-10T10:01:07.720692+00:00",
   "//openai.com/index/introducing-chatgpt-images-2-5": "2026-09-09T10:02:01.177904+00:00",
-  "//simonwillison.net/2026/aug/27/breaking-claude-code-opus-5-auto-mode": "2026-08-28T03:30:23.322536+00:00",
   "//simonwillison.net/2026/aug/30/understanding-chatgpt-work": "2026-08-31T10:01:16.595833+00:00",
   "//simonwillison.net/2026/aug/31/introducing-wrapture": "2026-09-01T10:01:21.403945+00:00",
   "//simonwillison.net/2026/sep/5/introducing-gpt-6-astra-for-developers": "2026-09-06T10:01:24.954564+00:00",
@@ -47,6 +45,7 @@
   "//theverge.com/ai-artificial-intelligence/987830/anthropic-claude-fable-mythos-5-1": "2026-09-02T10:01:16.351470+00:00",
   "//theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident": "2026-09-06T10:01:24.954564+00:00",
   "//theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft": "2026-09-07T10:01:52.492629+00:00",
-  "//theverge.com/tech/986789/linux-debian-generative-ai-policy": "2026-09-01T10:01:21.403945+00:00"
+  "//theverge.com/tech/986789/linux-debian-generative-ai-policy": "2026-09-01T10:01:21.403945+00:00",
+  "//withspecific.com/benchmarks/real-swe": "2026-09-13T10:01:22.523901+00:00"
  }
 }
