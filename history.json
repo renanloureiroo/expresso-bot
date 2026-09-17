@@ -1,5 +1,5 @@
 {
- "last_bulletin": "2026-09-16",
+ "last_bulletin": "2026-09-17",
  "links": {
   "//ai.meta.com/muse": "2026-09-09T10:02:01.177904+00:00",
   "//blog.cloudflare.com/accountable-mixed-use-ai-crawlers": "2026-09-16T10:01:41.512081+00:00",
@@ -8,6 +8,7 @@
   "//blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber": "2026-09-03T10:01:47.078783+00:00",
   "//blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking": "2026-09-16T10:01:41.512081+00:00",
   "//braziljournal.com/a5x-a-nova-bolsa-de-derivativos-e-futuros-se-diz-pronta-para-operar": "2026-09-15T10:01:36.258265+00:00",
+  "//github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot": "2026-09-17T10:01:03.730583+00:00",
   "//infoq.com/articles/chaos-engineering-ecs-payments": "2026-09-08T10:01:47.364023+00:00",
   "//infoq.com/news/2026/09/amazon-linux-2027-preview": "2026-09-15T10:01:36.258265+00:00",
   "//infoq.com/news/2026/09/cern-debian-infra": "2026-09-07T10:01:52.492629+00:00",
@@ -27,6 +28,7 @@
   "//infoq.com/news/2026/09/meta-astryx-design-system": "2026-09-14T10:01:32.661963+00:00",
   "//infoq.com/news/2026/09/metr-hugging-face-hack-report": "2026-09-14T10:01:32.661963+00:00",
   "//infoq.com/news/2026/09/openai-gpt-live": "2026-09-03T10:01:47.078783+00:00",
+  "//infoq.com/news/2026/09/tanstack-charts-alpha-introduced": "2026-09-17T10:01:03.730583+00:00",
   "//infoq.com/news/2026/09/vlt-npm-replacement": "2026-09-07T10:01:52.492629+00:00",
   "//infoq.com/presentations/ai-agent-testing-evaluation": "2026-09-08T10:01:47.364023+00:00",
   "//infoq.com/presentations/rust-refactoring": "2026-09-10T10:01:07.720692+00:00",
@@ -40,8 +42,11 @@
   "//techcrunch.com/2026/09/09/harvey-hits-15-5b-valuation-months-after-reaching-11b": "2026-09-10T10:01:07.720692+00:00",
   "//techcrunch.com/2026/09/14/superhuman-acquires-yc-backed-notetaker-fathom-as-productivity-platforms-push-for-agentic-work": "2026-09-15T10:01:36.258265+00:00",
   "//techcrunch.com/2026/09/15/meta-now-lets-ai-agents-handle-the-boring-parts-of-whatsapp-business-setup": "2026-09-16T10:01:41.512081+00:00",
+  "//techcrunch.com/2026/09/16/pulley-a-carta-rival-is-shutting-down": "2026-09-17T10:01:03.730583+00:00",
   "//theverge.com/ai-artificial-intelligence/990773/openai-german-wiki-incident": "2026-09-06T10:01:24.954564+00:00",
   "//theverge.com/ai-artificial-intelligence/990932/seattle-times-newsday-lawsuit-openai-microsoft": "2026-09-07T10:01:52.492629+00:00",
+  "//theverge.com/ai-artificial-intelligence/996234/anthropic-one-claude-cowork-docs-slides": "2026-09-17T10:01:03.730583+00:00",
+  "//theverge.com/tech/996310/google-home-mcp-integration-agentic-ai-smart-home-price-release-date": "2026-09-17T10:01:03.730583+00:00",
   "//withspecific.com/benchmarks/real-swe": "2026-09-13T10:01:22.523901+00:00"
  }
 }
