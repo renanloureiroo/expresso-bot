@@ -1,5 +1,5 @@
 {
- "last_bulletin": "2026-09-24",
+ "last_bulletin": "2026-09-27",
  "links": {
   "//blog.cloudflare.com/accountable-mixed-use-ai-crawlers": "2026-09-16T10:01:41.512081+00:00",
   "//blog.cloudflare.com/python-workers-ga": "2026-09-22T10:00:49.123354+00:00",
@@ -16,8 +16,10 @@
   "//infoq.com/news/2026/09/bun-ai-rewrite-zig-rust-4-months": "2026-09-21T10:00:41.137518+00:00",
   "//infoq.com/news/2026/09/cloudflare-automatic-key-exchang": "2026-09-20T10:00:50.720001+00:00",
   "//infoq.com/news/2026/09/cloudflare-cache-transcoding": "2026-09-14T10:01:32.661963+00:00",
+  "//infoq.com/news/2026/09/docker-cloud-sandboxes": "2026-09-27T10:00:59.777606+00:00",
   "//infoq.com/news/2026/09/elastic-beanstalk-cluster-eks": "2026-09-23T10:01:28.499238+00:00",
   "//infoq.com/news/2026/09/github-hydrafusion": "2026-09-13T10:01:22.523901+00:00",
+  "//infoq.com/news/2026/09/gke-pod-snapshots-benchmarks": "2026-09-27T10:00:59.777606+00:00",
   "//infoq.com/news/2026/09/google-ax-orchestrator": "2026-09-23T10:01:28.499238+00:00",
   "//infoq.com/news/2026/09/grab-agent-platform": "2026-09-15T10:01:36.258265+00:00",
   "//infoq.com/news/2026/09/graphify-codebase-exploration": "2026-09-24T10:01:34.235358+00:00",
@@ -41,7 +43,9 @@
   "//techcrunch.com/2026/09/15/meta-now-lets-ai-agents-handle-the-boring-parts-of-whatsapp-business-setup": "2026-09-16T10:01:41.512081+00:00",
   "//techcrunch.com/2026/09/16/pulley-a-carta-rival-is-shutting-down": "2026-09-17T10:01:03.730583+00:00",
   "//techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking": "2026-09-20T10:00:50.720001+00:00",
+  "//techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india": "2026-09-27T10:00:59.777606+00:00",
   "//tecnoblog.net/noticias/amazon-bloqueia-agente-de-ia-da-meta-que-faz-compras-sozinho": "2026-09-22T10:00:49.123354+00:00",
+  "//theverge.com/ai-artificial-intelligence/1001049/openai-training-pause": "2026-09-27T10:00:59.777606+00:00",
   "//theverge.com/ai-artificial-intelligence/996234/anthropic-one-claude-cowork-docs-slides": "2026-09-17T10:01:03.730583+00:00",
   "//theverge.com/tech/996310/google-home-mcp-integration-agentic-ai-smart-home-price-release-date": "2026-09-17T10:01:03.730583+00:00",
   "//withspecific.com/benchmarks/real-swe": "2026-09-13T10:01:22.523901+00:00"
