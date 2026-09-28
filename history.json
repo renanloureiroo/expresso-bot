@@ -1,5 +1,5 @@
 {
- "last_bulletin": "2026-09-27",
+ "last_bulletin": "2026-09-28",
  "links": {
   "//blog.cloudflare.com/accountable-mixed-use-ai-crawlers": "2026-09-16T10:01:41.512081+00:00",
   "//blog.cloudflare.com/python-workers-ga": "2026-09-22T10:00:49.123354+00:00",
@@ -12,22 +12,22 @@
   "//github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot": "2026-09-17T10:01:03.730583+00:00",
   "//infoq.com/news/2026/09/alibaba-opencodereview": "2026-09-21T10:00:41.137518+00:00",
   "//infoq.com/news/2026/09/amazon-linux-2027-preview": "2026-09-15T10:01:36.258265+00:00",
+  "//infoq.com/news/2026/09/aurora-dsql-foreign-keys": "2026-09-28T10:00:51.938664+00:00",
   "//infoq.com/news/2026/09/aws-middle-east-data-loss": "2026-09-21T10:00:41.137518+00:00",
   "//infoq.com/news/2026/09/bun-ai-rewrite-zig-rust-4-months": "2026-09-21T10:00:41.137518+00:00",
+  "//infoq.com/news/2026/09/c-rust-rewrite": "2026-09-28T10:00:51.938664+00:00",
   "//infoq.com/news/2026/09/cloudflare-automatic-key-exchang": "2026-09-20T10:00:50.720001+00:00",
   "//infoq.com/news/2026/09/cloudflare-cache-transcoding": "2026-09-14T10:01:32.661963+00:00",
   "//infoq.com/news/2026/09/docker-cloud-sandboxes": "2026-09-27T10:00:59.777606+00:00",
   "//infoq.com/news/2026/09/elastic-beanstalk-cluster-eks": "2026-09-23T10:01:28.499238+00:00",
-  "//infoq.com/news/2026/09/github-hydrafusion": "2026-09-13T10:01:22.523901+00:00",
   "//infoq.com/news/2026/09/gke-pod-snapshots-benchmarks": "2026-09-27T10:00:59.777606+00:00",
   "//infoq.com/news/2026/09/google-ax-orchestrator": "2026-09-23T10:01:28.499238+00:00",
   "//infoq.com/news/2026/09/grab-agent-platform": "2026-09-15T10:01:36.258265+00:00",
   "//infoq.com/news/2026/09/graphify-codebase-exploration": "2026-09-24T10:01:34.235358+00:00",
-  "//infoq.com/news/2026/09/ios-27-virtualization": "2026-09-13T10:01:22.523901+00:00",
   "//infoq.com/news/2026/09/jotai-3-released": "2026-09-14T10:01:32.661963+00:00",
   "//infoq.com/news/2026/09/kubernetes-1-37": "2026-09-21T10:00:41.137518+00:00",
   "//infoq.com/news/2026/09/lambda-90-minute-timeout": "2026-09-20T10:00:50.720001+00:00",
-  "//infoq.com/news/2026/09/lambda-snapstart-container-image": "2026-09-13T10:01:22.523901+00:00",
+  "//infoq.com/news/2026/09/linear-stylex-meta": "2026-09-28T10:00:51.938664+00:00",
   "//infoq.com/news/2026/09/meta-astryx-design-system": "2026-09-14T10:01:32.661963+00:00",
   "//infoq.com/news/2026/09/metr-hugging-face-hack-report": "2026-09-14T10:01:32.661963+00:00",
   "//infoq.com/news/2026/09/modal-scaling-sandboxes": "2026-09-24T10:01:34.235358+00:00",
@@ -35,6 +35,7 @@
   "//infoq.com/news/2026/09/tanstack-charts-alpha-introduced": "2026-09-17T10:01:03.730583+00:00",
   "//infoq.com/presentations/linkedin-context-engineering": "2026-09-20T10:00:50.720001+00:00",
   "//linear.app/now/ci-bottleneck-reworked": "2026-09-22T10:00:49.123354+00:00",
+  "//nytimes.com/2026/09/26/business/dealbook/ai-law-discount-billable-hour.html": "2026-09-28T10:00:51.938664+00:00",
   "//openai.com/index/better-prompt-caching-for-gpt-6": "2026-09-23T10:01:28.499238+00:00",
   "//simonwillison.net/2026/sep/22/opus-and-sol-and-luna": "2026-09-23T10:01:28.499238+00:00",
   "//simonwillison.net/2026/sep/23/gemini-tts-playground": "2026-09-24T10:01:34.235358+00:00",
@@ -47,7 +48,6 @@
   "//tecnoblog.net/noticias/amazon-bloqueia-agente-de-ia-da-meta-que-faz-compras-sozinho": "2026-09-22T10:00:49.123354+00:00",
   "//theverge.com/ai-artificial-intelligence/1001049/openai-training-pause": "2026-09-27T10:00:59.777606+00:00",
   "//theverge.com/ai-artificial-intelligence/996234/anthropic-one-claude-cowork-docs-slides": "2026-09-17T10:01:03.730583+00:00",
-  "//theverge.com/tech/996310/google-home-mcp-integration-agentic-ai-smart-home-price-release-date": "2026-09-17T10:01:03.730583+00:00",
-  "//withspecific.com/benchmarks/real-swe": "2026-09-13T10:01:22.523901+00:00"
+  "//theverge.com/tech/996310/google-home-mcp-integration-agentic-ai-smart-home-price-release-date": "2026-09-17T10:01:03.730583+00:00"
  }
 }
