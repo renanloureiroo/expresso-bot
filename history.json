@@ -1,11 +1,12 @@
 {
- "last_bulletin": "2026-10-06",
+ "last_bulletin": "2026-10-07",
  "links": {
   "//arstechnica.com/security/2026/10/vulnerability-in-agents-from-google-and-others-exposes-structural-flaw-in-mcp": "2026-10-06T10:01:11.761509+00:00",
   "//blog.cloudflare.com/auto-router": "2026-10-01T10:01:21.642433+00:00",
   "//blog.cloudflare.com/monetization-gateway-beta": "2026-10-01T10:01:21.642433+00:00",
   "//blog.cloudflare.com/worker-previews": "2026-09-23T10:01:28.499238+00:00",
   "//braziljournal.com/ai-ja-machuca-empresas-que-dependem-da-inercia-do-consumidor": "2026-09-24T10:01:34.235358+00:00",
+  "//developers.openai.com/api/docs/guides/decisions": "2026-10-07T10:01:11.598916+00:00",
   "//github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent": "2026-09-29T10:00:56.751858+00:00",
   "//infoq.com/news/2026/09/agentic-refactoring-case-study": "2026-09-30T10:01:18.267911+00:00",
   "//infoq.com/news/2026/09/aurora-dsql-foreign-keys": "2026-09-28T10:00:51.938664+00:00",
@@ -27,6 +28,7 @@
   "//infoq.com/news/2026/10/gitlab-critical-vulnerabilities": "2026-10-04T10:01:20.009728+00:00",
   "//infoq.com/news/2026/10/open-appa-zero-security-breach": "2026-10-04T10:01:20.009728+00:00",
   "//infoq.com/news/2026/10/pizza-bot-ai-agents": "2026-10-04T10:01:20.009728+00:00",
+  "//infoq.com/news/2026/10/spanner-omni-deploy-anywhere-ga": "2026-10-07T10:01:11.598916+00:00",
   "//infoq.com/news/2026/10/typesafe-ai-jev-released": "2026-10-01T10:01:21.642433+00:00",
   "//nytimes.com/2026/09/26/business/dealbook/ai-law-discount-billable-hour.html": "2026-09-28T10:00:51.938664+00:00",
   "//openai.com/index/better-prompt-caching-for-gpt-6": "2026-09-23T10:01:28.499238+00:00",
@@ -42,6 +44,8 @@
   "//techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions": "2026-10-05T10:01:23.631375+00:00",
   "//techcrunch.com/2026/10/05/openai-launches-visual-ads-that-appear-alongside-image-generation-results": "2026-10-06T10:01:11.761509+00:00",
   "//techcrunch.com/2026/10/05/openai-will-start-watermarking-chatgpts-text-in-the-eu": "2026-10-06T10:01:11.761509+00:00",
-  "//theverge.com/ai-artificial-intelligence/1001049/openai-training-pause": "2026-09-27T10:00:59.777606+00:00"
+  "//techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits": "2026-10-07T10:01:11.598916+00:00",
+  "//theverge.com/ai-artificial-intelligence/1001049/openai-training-pause": "2026-09-27T10:00:59.777606+00:00",
+  "//theverge.com/ai-artificial-intelligence/1005451/google-gemini-free-flash-lite-only": "2026-10-07T10:01:11.598916+00:00"
  }
 }
