@@ -1,5 +1,5 @@
 {
- "last_bulletin": "2026-10-28",
+ "last_bulletin": "2026-10-29",
  "links": {
   "//arstechnica.com/security/2026/10/code-execution-flaw-in-uefi-firmware-threatens-most-servers-on-planet-earth": "2026-10-28T10:01:45.571642+00:00",
   "//arstechnica.com/security/2026/10/php-maintainers-tell-web-devs-to-prepare-themselves-for-critical-security-patches": "2026-10-21T10:00:43.659129+00:00",
@@ -7,19 +7,21 @@
   "//blog.cloudflare.com/kv-cache-exposure-remediation": "2026-10-27T10:00:57.689126+00:00",
   "//blog.cloudflare.com/obsessive-inference-optimization": "2026-10-20T10:00:48.732700+00:00",
   "//blog.cloudflare.com/typescript-rust-port": "2026-10-21T10:00:43.659129+00:00",
+  "//blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon": "2026-10-29T10:01:21.445796+00:00",
   "//braziljournal.com/ifood-paga-r-1-bilhao-pela-caju-e-dobra-a-aposta-em-beneficios": "2026-10-21T10:00:43.659129+00:00",
   "//fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data": "2026-10-18T10:00:33.825433+00:00",
   "//github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers": "2026-10-15T10:01:13.532153+00:00",
   "//github.com/finereli/whatsapp-mcp": "2026-10-19T10:01:00.740960+00:00",
-  "//infoq.com/news/2026/10/antigravity-sdk-local-models": "2026-10-14T10:01:04.255933+00:00",
+  "//infoq.com/news/2026/10/anthropic-code-review": "2026-10-29T10:01:21.445796+00:00",
   "//infoq.com/news/2026/10/atlassian-devex-2026": "2026-10-27T10:00:57.689126+00:00",
   "//infoq.com/news/2026/10/aws-sovereign-cloud-exercise": "2026-10-18T10:00:33.825433+00:00",
   "//infoq.com/news/2026/10/buildkite-ci-secrets-agentic": "2026-10-19T10:01:00.740960+00:00",
   "//infoq.com/news/2026/10/chrome-email-verification": "2026-10-28T10:01:45.571642+00:00",
   "//infoq.com/news/2026/10/cloudflare-hashing-optimization": "2026-10-25T10:01:08.067766+00:00",
   "//infoq.com/news/2026/10/cloudflare-tsrs-ai-typescript": "2026-10-27T10:00:57.689126+00:00",
-  "//infoq.com/news/2026/10/cloudflare-viteplus-stable": "2026-10-14T10:01:04.255933+00:00",
+  "//infoq.com/news/2026/10/cloudflare-web-search-api": "2026-10-29T10:01:21.445796+00:00",
   "//infoq.com/news/2026/10/data-agent-kit-ga": "2026-10-25T10:01:08.067766+00:00",
+  "//infoq.com/news/2026/10/datadog-scout-sre-model": "2026-10-29T10:01:21.445796+00:00",
   "//infoq.com/news/2026/10/embeddinggemma-2-multimodal": "2026-10-20T10:00:48.732700+00:00",
   "//infoq.com/news/2026/10/google-argon-optimizes-adk": "2026-10-25T10:01:08.067766+00:00",
   "//infoq.com/news/2026/10/google-ml-drift": "2026-10-26T10:01:15.834399+00:00",
@@ -41,11 +43,9 @@
   "//techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says": "2026-10-18T10:00:33.825433+00:00",
   "//techcrunch.com/2026/10/19/hackers-hit-ai-coding-tool-opencode-running-up-charges-on-users-ai-accounts": "2026-10-20T10:00:48.732700+00:00",
   "//techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat": "2026-10-22T10:00:45.793457+00:00",
-  "//tecnoblog.net/noticias/character-ai-entra-com-pedido-de-falencia-e-pode-encerrar-app": "2026-10-14T10:01:04.255933+00:00",
   "//tecnoblog.net/noticias/itau-agora-permite-usar-pontos-acumulados-para-pagar-pix": "2026-10-20T10:00:48.732700+00:00",
   "//tecnoblog.net/noticias/itau-compra-startup-de-ia-por-r-29-bilhoes": "2026-10-27T10:00:57.689126+00:00",
   "//tecnoblog.net/noticias/so-3-das-empresas-viram-ganhos-com-ia-mostra-estudo": "2026-10-28T10:01:45.571642+00:00",
-  "//theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web": "2026-10-18T10:00:33.825433+00:00",
-  "//theverge.com/news/1010365/shopify-opens-its-catalog-up-to-more-ai-agents": "2026-10-14T10:01:04.255933+00:00"
+  "//theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web": "2026-10-18T10:00:33.825433+00:00"
  }
 }
