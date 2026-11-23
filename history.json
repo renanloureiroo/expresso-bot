@@ -1,11 +1,10 @@
 {
- "last_bulletin": "2026-11-22",
+ "last_bulletin": "2026-11-23",
  "links": {
   "//247wallst.com/investing/2026/11/07/openai-just-raised-11-billion-at-a-1-25-trillion-valuation-below-the-1-4-trillion-it-first-sought": "2026-11-09T10:01:20.585972+00:00",
   "//anthropic.com/claude-fable-and-mythos-5-2": "2026-11-10T10:00:34.743948+00:00",
   "//blog.cloudflare.com/java4shell-waf-protection": "2026-11-19T10:01:00.993713+00:00",
   "//blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available": "2026-11-11T10:01:27.397878+00:00",
-  "//braziljournal.com/new-york-times-perto-de-comprar-o-letterboxd-a-a-rede-social-dos-cinefilos": "2026-11-08T10:01:27.011117+00:00",
   "//github.blog/engineering/engineering-principles/building-the-agent-host-protocol-for-sessions-that-continue-across-devices": "2026-11-18T10:01:08.900518+00:00",
   "//github.blog/open-source/git/git-security-vulnerabilities-announced-7": "2026-11-11T10:01:27.397878+00:00",
   "//github.com/aws/aws-emulator": "2026-11-12T10:01:23.841935+00:00",
@@ -13,8 +12,8 @@
   "//infoq.com/news/2026/11/alpine-linux-openssh-sshhole": "2026-11-16T10:01:04.176153+00:00",
   "//infoq.com/news/2026/11/aws-lambda-gpu-managed-instances": "2026-11-22T10:00:53.712681+00:00",
   "//infoq.com/news/2026/11/aws-nitro-sandboxes-eks": "2026-11-16T10:01:04.176153+00:00",
+  "//infoq.com/news/2026/11/claude-code-leaking-secrets": "2026-11-23T10:01:08.596203+00:00",
   "//infoq.com/news/2026/11/claude-code-review": "2026-11-16T10:01:04.176153+00:00",
-  "//infoq.com/news/2026/11/cloudflare-d1-control-plane": "2026-11-08T10:01:27.011117+00:00",
   "//infoq.com/news/2026/11/cloudflare-private-origins": "2026-11-15T10:01:20.574568+00:00",
   "//infoq.com/news/2026/11/cohere-open-weight-egress-risk": "2026-11-15T10:01:20.574568+00:00",
   "//infoq.com/news/2026/11/datadog-ai-agent-observability": "2026-11-18T10:01:08.900518+00:00",
@@ -25,10 +24,10 @@
   "//infoq.com/news/2026/11/google-agent-distraction": "2026-11-11T10:01:27.397878+00:00",
   "//infoq.com/news/2026/11/google-cloud-spend-caps": "2026-11-10T10:00:34.743948+00:00",
   "//infoq.com/news/2026/11/google-sre-book-ai-era": "2026-11-17T10:00:57.053034+00:00",
-  "//infoq.com/news/2026/11/grab-ai-generated-code-safety": "2026-11-08T10:01:27.011117+00:00",
+  "//infoq.com/news/2026/11/harness-new-operating-system": "2026-11-23T10:01:08.596203+00:00",
   "//infoq.com/news/2026/11/nodejs-debounce-throttle": "2026-11-15T10:01:20.574568+00:00",
   "//infoq.com/news/2026/11/pinterest-journey": "2026-11-09T10:01:20.585972+00:00",
-  "//infoq.com/news/2026/11/postgresql-vector-search": "2026-11-08T10:01:27.011117+00:00",
+  "//infoq.com/news/2026/11/postgresql-19-released": "2026-11-23T10:01:08.596203+00:00",
   "//infoq.com/news/2026/11/quik-2-streaming": "2026-11-18T10:01:08.900518+00:00",
   "//infoq.com/news/2026/11/topcoat-rust-framework": "2026-11-09T10:01:20.585972+00:00",
   "//infoq.com/news/2026/11/vercel-ui-sdk": "2026-11-19T10:01:00.993713+00:00",
@@ -46,6 +45,7 @@
   "//tecnoblog.net/noticias/eua-impoem-restricoes-ao-brasil-para-compra-de-chips-de-ia": "2026-11-17T10:00:57.053034+00:00",
   "//tecnoblog.net/noticias/nubank-agora-e-banco-de-fato": "2026-11-16T10:01:04.176153+00:00",
   "//theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents": "2026-11-12T10:01:23.841935+00:00",
+  "//theverge.com/games/1039770/binding-of-isaac-ai-music": "2026-11-23T10:01:08.596203+00:00",
   "//xusheng.dev/posts/windows-coding-agent-telemetry": "2026-11-17T10:00:57.053034+00:00"
  }
 }
